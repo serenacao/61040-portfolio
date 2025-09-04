@@ -1,3 +1,3 @@
-Put any pictures you want to include in your portfolio here.
+6.1040 portfolio - Images
 
 ![Clone repository image](clone_portfolio.png)

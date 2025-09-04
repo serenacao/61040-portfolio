@@ -1,16 +1,18 @@
-# Template Portfolio
-This will be your portfolio repository. Use this as a [template repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-template-repository) and customize it to your own tastes. We gave you a starting point with a space to describe yourself and a link to where your assignment 1 file can be.
+# Serena's Portfolio
+Welcome to my portfolio repository!
 
 # About Me
-*My name is Amber Horvath, I'm a postdoctoral associate researching code comprehension interventions, it's nice to meet you! [Here is a link to my real website.](https://amberhorvath.com)
-Now you should write something about yourself here!*
+My name is Serena Cao. I'm a [*senior*](https://www.merriam-webster.com/slang/unc). Some hobbies of mine include cooking and restaurant-hopping! I am currently working on an extensive excel list that rates various restaurants nearby (it may never be completed I fear). 
+
+I hope that I can produce a useful product via my project that people can use! 
 
 Some fun facts about me:
-1. I love hockey.
+1. I got knee surgery.
 2. I do pottery.
-3. I have an extra bone in my right foot.
+3. I like to boulder.
 
-![picture of snow leopard mama and baby](https://pbs.twimg.com/media/GzYlia3XMAAWfm4?format=jpg&name=4096x4096)
+
+![picture of something in my laptop](assets/duckie.jpg)
 
 
 # Table of Contents
