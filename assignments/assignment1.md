@@ -3,23 +3,43 @@
 ## Domains
 1. Mental health issues - for example, recognizing symptoms of decline and alerting before it becomes more serious 
 
+My friends have expressed interest in building mental health related apps!
+
 2. Saving money - I want to know if the purchase I'm making is valuable (maybe it is on sale) or if it is a fake sale. I want to know if there would be a cheaper place to buy the items that i want to buy
+
+I was worrying the other day about where to buy my groceries and it took an hour to figure out where to go
 
 3. What/where to eat - more of a "what" to eat, what am i craving, cannot pinpoint what I want to eat
 
+My friends couldn't figure out where to eat and put all the pressure on me (I didn't know either)
+
 4. Baking / cooking - substitutions, it is often difficult to find recipes that provide steps if you are missing a certain ingredient and also annoying to manually do the conversions of amount
+
+I love baking and cooking! But I tend to want to make a recipe before checking if I have all the ingredients or not
 
 5. Being consistent with habits - waking up, going to bed, working out
 
+I want to be better at sleeping at more regular times, holding myself to promises I make to myself
+
 6. Friendships, human connection - feeling lonely, wanting validation (how to resolve this feeling alone)
+
+I think in this day and age people seek out validation to their own detriment and I would be interested to see if there could be something helpful
 
 7. Efficient transportation, especially given a complicated itineary 
 
+It took me 40 minutes (public transport) to get to somewhere 1.7 miles away. It would have taken 50 minutes to walk there. However, a bus runs there which makes it 20+ minutes, but it only runs at certain times.
+
 8. Going outside, exploring - Going on walks and exploring, what to do on weekends
 
-9. Coursework - It takes me a long time to figure out what courses im taking and i have to switch across multiple tabs + click through multiple things, would be nicer if the process was more streamlined. ie What classes should i take to graduate (have filters like major, interests, max hours, credits)
+I really like going outside and exploring. I especially just like wandering new places and exploring shops. But sometimes I don't know what to do or where to go.
+
+9. Coursework - ie What classes should i take to graduate (have filters like major, interests, max hours, credits)
+
+ It takes me a long time to figure out what courses im taking and i have to switch across multiple tabs + click through multiple things, would be nicer if the process was more streamlined. 
 
 10. Job applications - process is often repetitive since most applications ask the same thing but there are niche things like cover letters, other application questions that are company specific which slow down the process 
+
+I apply to a lot of jobs unfortunately and the process is terrible
 
 ## Problems
 ### Domain 1: Job application
