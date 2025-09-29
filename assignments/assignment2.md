@@ -81,9 +81,8 @@ a set of question String
 actions
 
 ```
-updateInput(file: FileStorage):
-requires: file does not already exist in files
-effect: adds file to set of files
+updateInput(files: FileStorage):
+effect: updates files to match the files in FileStorage
 
 generate(question: String, files: FileStorage): (draft: String)
 
@@ -172,42 +171,35 @@ synchronizations
 ```
 sync generatorUsesFileStorage
     when FileStorage.upload(name, content): (file)
-    then Generator.updateInput(file)
+    then FileStorage.files(): (files)
+    then Generator.updateInput(files)
 
 sync generatorRemovesFile
     when FileStorage.remove(name): (file)
     then Generator.removeInput(file)
 
-sync generatorProducesPDF
-    when Generator.generate(question, files): (draft)
-    then PDFDownload.setContent(content: draft, filename: "draft.pdf")
-
-sync generatorEditsPDF
-    when Generator.edit(draft, content): (newDraft)
-    then PDFDownload.setContent(content: newDraft, filename: "draft.pdf")
-
-sync generatorFeedbackPDF
-    when Generator.feedback(draft, feedback): (newDraft)
-    then PDFDownload.setContent(content: newDraft, filename: "draft.pdf")
+sync generatorFinalizedPDF
+    when Generator.accept(questionText): (draft)
+    then PDFDownload.setContent(content: draft, filename: "final_output.pdf")
 
 ```
 
 ## UI Sketches.
 ![homepage](/assets/homepage.png)
-The home page provides a simple interface for users to start interacting with the generator. At its core is a single text box where users can enter a prompt or question for the model. Alongside the text box is a button to upload files, allowing users to provide context, such as writing style, skills, or other reference material. Once uploaded, files can also be edited or removed, ensuring that the generator always uses the most relevant information when producing answers.
+The home page has a single text box where users can enter a prompt or question for the model. Alongside the text box is a button to upload files, allowing users to provide context, such as writing style, skills, or other reference material. Once uploaded, files can also be edited or removed, ensuring that the generator always uses the most relevant information when producing answers.
 
 ![chatinterface](/assets/chatinterface.png)
-The chat interface functions similarly to a standard conversational interface like ChatGPT, allowing users to enter prompts and receive model-generated responses. Above the chat window, there is a files dropdown that displays all uploaded context files, which users can modify by adding or removing files. Each model-generated output is editable directly in the interface, giving the user control to refine content before accepting it. Beneath every response is a check mark that the user can click to mark the draft as “accepted,” updating the status of the question and finalizing the content.
+The chat interface functions similarly to a standard conversational interface like ChatGPT, allowing users to enter prompts and receive model-generated responses. Above the chat window, there is a files dropdown that displays all uploaded context files, which users can modify by removing files. Each model-generated output is editable directly in the interface, giving the user control to change content before accepting it. Beneath the most recent response is a check mark that the user can click to mark the draft as “accepted,” updating the status of the question and finalizing the content and taking them to the download screen.
 
 ![downloads](/assets/downloadscreen.png)
-The download interface allows users to take any finalized text and save it locally as a PDF. Users can either edit the content inline before downloading or simply click a button to generate a PDF file with the text. The interface automatically handles mapping the text to a filename and triggers a local download to the user’s device, making it straightforward to save and share outputs from the generator.
+The download interface allows users to take any finalized text and save it locally as a PDF. Users can either edit the content inline before downloading or simply click a button to generate a PDF file with the text. The interface automatically handles mapping the text to a filename and triggers a local download to the user’s device, making it straightforward to save and share outputs from the generator. Once they have downloaded it, they can return to the homepage.
 
 
 ## User journey. 
 
-A user begins by identifying a problem: they need to generate a response to a question or prompt that reflects their personal or professional context, such as writing style, skills, or past experiences. They want the answer to be tailored, high-quality, and something they can save for later use as a PDF.
+A user wants to write a response to a question or prompt that reflects their personal or professional context, such as writing style, skills, or past experiences. They want the answer to be tailored, high-quality, and something they can save for later use as a PDF. They also want it to take as little time as possible.
 
-The user opens the application and is presented with the home page, which includes a simple textbox for entering their prompt and a button to upload files. They use the file upload feature to add relevant context documents, such as a resume or notes, and may edit or remove files to ensure the generator has the most accurate information.
+The user opens the application and starts on the home page, which includes a simple textbox for entering their prompt and a button to upload files. They use the file upload feature to add relevant context documents, such as a resume or notes, and may edit or remove files to ensure the generator has the most accurate information.
 
 Next, the user types their question or prompt into the textbox and submits it. The generator produces a draft response based on the uploaded files and displays it in the chat interface. In this interface, the user can review the output and make inline edits to refine the content. If needed, they can also provide feedback to the generator, prompting it to regenerate the draft. Once satisfied, the user clicks the check mark under the output to accept the draft, marking the question as complete.
 
