@@ -68,13 +68,14 @@ purpose: an interactive answer that can be generated and modified by an LLM and 
 principle: after the LLM generates answertype to the question, if there is user feedback, it will regenerate its output. Otherwise, the user can edit it or copy it for their use.
 
 state 
-
+```
 a set of files FileStorage
 
 a set of question String 
+
     a draft String
     a status String
-
+```
 
     
 

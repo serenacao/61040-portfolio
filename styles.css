@@ -1,0 +1,112 @@
+/* *{
+    padding: 0;
+} */
+
+img {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+body{
+    background-color: #fc6c85;
+    color: white; 
+    font-family: Times, Courier, monospace; 
+    font-size: 30px;
+    font-weight: lighter;
+
+    /*
+    font: lighter 30px Times, Courier, monospace;
+    */
+
+    line-height: 2em;
+    margin: 0;
+}
+
+.container{
+    width: 80%;
+    margin: auto;
+}
+
+.box-1{
+    background-color: #ffd1dc;
+    color: #fc6c85;
+    margin: 5px 10px;
+    border: 20px #945161 solid; 
+    padding: 3px 20px;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+.box-1 h1{
+    font-style: italic; 
+    text-decoration: underline;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    word-spacing: 1em;
+}
+
+.box-2{
+    margin: 30px 80px;
+    border: 10px #945161 dotted; 
+    padding: 40px 40px;
+}
+
+.categories{
+    border: 3px #945161 solid;
+    border-radius: 20px;
+    margin: 20px 50px;
+    padding: 10px 30px;
+}
+
+.categories ul{
+    list-style: upper-latin;
+}
+
+.categories a{
+    text-decoration-color: #945161;
+    color: #945161
+}
+
+
+.categories li{
+    padding-bottom: 6px;
+    border-bottom: dotted 1px #fff;
+    list-style-image: url('/Users/serenacao/Desktop/6.1010/css/images.jpeg')
+}
+
+/* .my-form{
+    padding:20px;
+} */
+
+.my-form input[type='text'], .my-form{
+    padding: 8px;
+    width: 80%;
+}
+
+.my-form input[type='radio']{
+    display: block;
+}
+
+.my-form input[type='submit']{
+    background-color: #945161;
+    color: #fff;
+    padding: 5px 15px;
+    border: none;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.my-form a{
+    text-decoration: none;
+    color: #945161;
+}
+
+.block{
+    float:left;
+    width: 50%;
+    border: 10px #945161 dotted; 
+    padding: 40px 40px;
+    box-sizing: border-box;
+}
